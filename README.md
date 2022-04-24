@@ -1,18 +1,31 @@
-email_analyzer.py
+**Email Analyzer:**
 
-#################################################################################################
+A python script that allows you to extracts the relevant data that can be used later on in many ways such as reporting and incident responses. It can fetch and provide crucial email details which can be used in email forensics. It has ability to:
+
+1. Extract Attachment (provides SHA256)
+2. Extract URLs
+3. Provide details such hops visited by email, Sender, Receipents, reply to etc.
+
+This is very usefull for SOC analyst who works with SPAM, phishing emails on daily basis, where we want to get all details without opening the email.
+
+#################################################################
+
+**email_analyzer.py**
+
+#################################################################
 
 Author: Mr.AnyThink
 
-usage: email_forensics.py -f <.eml file name> [-s <number_of_action>]
-It work in python 2.7. If you are on python3 make sure you are creating virtualenvironment for python2.7. To create follow below
+It works in python 2.7. If you are on python3 make sure you are creating virtualenvironment for python2.7. To create follow below
 
-	virtualenv -p /usr/bin/python2.7 venv => create virtual environment for python2.7
-	. venv/bin/activate => Activate virutal environment
-	Then install tabulate with command "pip install tabulate"
-	
+	# create virtual environment for python2.7
+	virtualenv -p /usr/bin/python2.7 venv
+	# Activate virutal environment
+	. venv/bin/activate
+	#Then install tabulate with command, as a prerquisite
+	pip install tabulate
 
-#################################################################################################
+#################################################################
 
 usage:
 
