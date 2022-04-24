@@ -1,5 +1,4 @@
 # email_analyzer.py
-
 #################################################################################################
 # 
 # Author: Mr.AnyThink
@@ -9,7 +8,7 @@
 # . venv/bin/activate => Activate virutal environment
 # Then install tabulate with command "pip install tabulate"
 #
-#################################################################################################
+#################################################################################################**
 
 usage:
 	python email_analyzer.py -f <email_file> [-s <select_operation> ]
