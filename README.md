@@ -22,7 +22,7 @@ Install the dependencies with:
 
 usage:
 
-	python email_analyzer.py -f <email_file> [-s <select_operation> ]
+	python3 email_analyzer.py -f <email_file> [-s <select_operation> ]
 	
 	-f	Specify email file to analyse.
 	-s	Select operation to get details.
