@@ -46,17 +46,17 @@ def extractAttachments(mail):
     for part in mail.walk():
            if part.get_content_maintype() != 'multipart' and part.get('Content-Disposition') is not None:
                  open(outputdir + '/' + part.get_filename(), 'wb').write(part.get_payload(decode=True))
+                 #calculate sha256 hash, of written file
+                 sha256_hash = hashlib.sha256()
+                 #get full file path
+                 file_name = str(outputdir + '/' + part.get_filename())
+                 with open(file_name, "rb") as f:
+                    for byte_block in iter(lambda: f.read(4096),b""):
+                        sha256_hash.update(byte_block)
 
-    #calculate sha256 hash, 
-    sha256_hash = hashlib.sha256()
-    #get full file path
-    file_name = str(outputdir + '/' + part.get_filename())
-    with open(file_name, "rb") as f:
-           for byte_block in iter(lambda: f.read(4096),b""):
-           sha256_hash.update(byte_block)
-           print (str(i) + ". " + part.get_filename() + " (SHA256: " + str(sha256_hash.hexdigest()) + " )")
-           i = i + 1
-
+                 f.close()
+                 print (str(i) + ". " + part.get_filename() + " (SHA256: " + str(sha256_hash.hexdigest()) + " )")
+                 i = i + 1
     print('\nAttachments are downloaded at: ' + outputdir + '\n')
 
 #######################
