@@ -12,10 +12,11 @@ This is very usefull for SOC analyst who works with SPAM, phishing emails on dai
 
 Clone repository with:
 
-	https://github.com/Mr-AnyThink/email_analyzer.git
+	git clone https://github.com/Mr-AnyThink/email_analyzer.git
 
 Install the dependencies with:
 
+	cd email_analyzer/
 	pip3 install -r requirements.txt
 
 
