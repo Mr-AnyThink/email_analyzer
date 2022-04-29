@@ -29,5 +29,5 @@ usage:
 	
 Example: 
 
-	python email_analyzer.py -f email.eml
-	python email_analyzer.py -f email.eml -s 1
+	python3 email_analyzer.py -f email.eml
+	python3 email_analyzer.py -f email.eml -s 1
