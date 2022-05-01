@@ -32,3 +32,8 @@ Example:
 
 	python3 email_analyzer.py -f email.eml
 	python3 email_analyzer.py -f email.eml -s 1
+	
+	
+**TO DO**
+
+ - Parse emlx files
