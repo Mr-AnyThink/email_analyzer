@@ -116,26 +116,31 @@ def extractBasicHeader(mail):
     return_path = "None"
     reply_to = "None"
     spf = "None"
+    xorgip = "None"
+    xsenderip = "None"
     for key, value in headers.items():
         if str(key).lower() == 'to':
             To = value
         if str(key).lower() == 'from':
-                        From = value
-        if str(key).lower() == 'ff':
-                        CC = value
+                From = value
+        if str(key).lower() == 'cc':
+                CC = value
         if str(key).lower() == 'subject':
-                        Subject = email.header.decode_header(value) 
+                Subject = email.header.decode_header(value) 
                 # Many time subnect is encoded, as mentioned below
                 #=?utf-8?B?U3BhbTog4pyJIHRvbGxncm91cC5jb20gU3RvcmFnZSBSZS1WYWxpZGF0aW9u?=
                 #=?utf-8?Q?_Of_Files_and_E-mail_Update.2021?=
         if str(key).lower() == 'reply-to':
-                        reply_to = value
+                reply_to = value
         if str(key).lower() == 'return-path':
-                        return_path = value
+                return_path = value
         if str(key).lower() == 'authentication-results':
             spf = value.replace('\n', '')
-
-    return To, From, CC, Subject[0][0].replace('\n', ''), reply_to, return_path, spf
+        if str(key).lower() == 'x-originating-ip':
+            xorgip = value
+        if str(key).lower() == 'x-sender-ip':
+            xsenderip = value
+    return To, From, CC, str(Subject[0][0]).replace('\n', ''), reply_to, return_path, spf, xorgip, xsenderip
 
 ##############################################
 # PrintHeader
@@ -263,7 +268,7 @@ def main():
 
             url_count = count_URLs(mail)
             att_count = count_attachment(mail)
-            To, From, CC, Subject, reply_to, return_path, spf = extractBasicHeader(mail)
+            To, From, CC, Subject, reply_to, return_path, spf, xorgip, xsenderip = extractBasicHeader(mail)
             SrcIP = getSource(mail)
 
             #print menu
@@ -279,6 +284,7 @@ def main():
             print ("\tSender IP / Host" + " "*(len("Recipient email ID(s)")-len("Sender IP / Host")) + " : " + str(SrcIP).replace("\n", ''))
             print ("\treply-to/return-path" + " "*(len("Recipient email ID(s)")-len("reply-to/return-path")) + " : " + reply_to + " / " + return_path)
             print ("\tSubject" + " "*(len("Recipient email ID(s)")-len("Subject")) + " : " + Subject)
+            print ("\tx-org-ip/x-sender-ip" + " "*(len("Recipient email ID(s)")-len("x-org-ip/x-sender-ip")) + " : " + xorgip + " / " + xsenderip)
             print ("\tAuth-results" + " "*(len("Recipient email ID(s)")-len("Auth-results")) + " : " + spf)
 
 
