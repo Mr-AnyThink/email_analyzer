@@ -36,4 +36,4 @@ Example:
 	
 **TO DO**
 
- - Parse emlx files
+ - [ ] Parse emlx files
