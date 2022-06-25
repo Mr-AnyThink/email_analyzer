@@ -1,0 +1,613 @@
+Delivered-To: ameermadd@gmail.com
+Received: by 2002:a54:3942:0:0:0:0:0 with SMTP id t2csp4810279ecs;
+        Wed, 22 Jun 2022 13:09:34 -0700 (PDT)
+X-Google-Smtp-Source: AGRyM1vMGZuNm1Uyy87qc7X+p32KGGkRrX9h2jRY/529J2x0b2eMgCll38FiODXXhN9MjHjmDboK
+X-Received: by 2002:a05:6214:c45:b0:46d:4557:ad4c with SMTP id r5-20020a0562140c4500b0046d4557ad4cmr29705102qvj.120.1655928574779;
+        Wed, 22 Jun 2022 13:09:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1655928574; cv=none;
+        d=google.com; s=arc-20160816;
+        b=U5zQbCFNa/HIu+5fW41duhz23cKCD8NCPI/bjVxzS0Q98R1E7MO0q3EabSjtQMmXIj
+         LAiofuyj3kNhfSDo5UFMGj/NZWRFJqmcB0+SsqaAIL5E5HjT5OQAZK6a6Znn1HZDb583
+         NhpeLwY3z4YGP6DV20yTeqnR/kiPToiarp4zHyZCTtB3f/iZMcKuDn6KAquqgf1EgrBF
+         SAlBGO2RcfpPOq44sw1uGXmnD0lZs2gHx0t+263m3nGuYidPaPhaQWl1AiFcOfXSCwmr
+         Clk99etfrIUB3NM2ukTdRSxsd++pnGl0ENYUoDsGStsOtqkK+nGkU1TY5jjs53bSQnQY
+         JDAA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:list-unsubscribe-post:list-unsubscribe:feedback-id
+         :content-transfer-encoding:mime-version:date:subject:from:to
+         :dkim-signature:dkim-signature;
+        bh=Yi1qVUfEE7D9AjK1y2slmB1l/G8cQy/+qlJ8Rq354H0=;
+        b=riAR/gA7+BmGtnrraM08JuPqc8h+c9WaAeRWjVxWAGtjtX0KussAP4sw6T5p97BPwJ
+         Gq23/nobTsARuuKdAmz9devPNllZhjyeJY8/XzG8BwgVkUdoiW8i1BbMzHb4IBFJPeRL
+         sM8TOp1464FTqXTWz/asXaVYZnwsAPFDsWpkWozyWqRmHFh/tJJE6w5fmutKwwrmCZKj
+         Jtt5xaOpT6XYpd84ON9w6qQghhU6cZkJkZ4X8iIic7iWprVED3CWi0J2vqgoQdljmeeq
+         nPZWQ7df4EVmc4Ao8kESCJZZgwaZpeC8PCzdIs/kvpQl4BEQO1wkKolsXAcPubOjFfPK
+         cnjA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@bearbulltraders.com header.s=dk header.b=EdaS8On1;
+       dkim=pass header.i=@acems1.com header.s=dk header.b=uqMA8Mf3;
+       spf=pass (google.com: domain of bounce-511522-1434-39472-ameermadd=gmail.com@s4.csa1.acemsd3.com designates 52.128.40.137 as permitted sender) smtp.mailfrom="bounce-511522-1434-39472-ameermadd=gmail.com@s4.csa1.acemsd3.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=bearbulltraders.com
+Return-Path: <bounce-511522-1434-39472-ameermadd=gmail.com@s4.csa1.acemsd3.com>
+Received: from s4.csa1.acemsd4.com (s4.csa1.acemsd4.com. [52.128.40.137])
+        by mx.google.com with ESMTPS id br18-20020a05620a461200b006a665dd52dasi13060162qkb.394.2022.06.22.13.09.34
+        for <ameermadd@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 22 Jun 2022 13:09:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-511522-1434-39472-ameermadd=gmail.com@s4.csa1.acemsd3.com designates 52.128.40.137 as permitted sender) client-ip=52.128.40.137;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bearbulltraders.com header.s=dk header.b=EdaS8On1;
+       dkim=pass header.i=@acems1.com header.s=dk header.b=uqMA8Mf3;
+       spf=pass (google.com: domain of bounce-511522-1434-39472-ameermadd=gmail.com@s4.csa1.acemsd3.com designates 52.128.40.137 as permitted sender) smtp.mailfrom="bounce-511522-1434-39472-ameermadd=gmail.com@s4.csa1.acemsd3.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=bearbulltraders.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=bearbulltraders.com;
+ h=To:From:Subject:Date:MIME-Version:Content-Type:Content-Transfer-Encoding:
+ List-Unsubscribe:List-Unsubscribe-Post:Message-ID;
+ i=andrew@bearbulltraders.com;
+ bh=Yi1qVUfEE7D9AjK1y2slmB1l/G8cQy/+qlJ8Rq354H0=;
+ b=EdaS8On1WUrQvx782I22r3iBQW0+QDJpz4XkRwrpcZUAW6t+6g4rPJomg5urHLE0DNUN1iVmKh4j
+   YNZHAeWCkFduzYiDTuz0qSdKeDSziv854DRqkYx4e7lC6+SAR7tWA8LH3qCDpkeWVagjnEwauDYA
+   o+s36XspherY6PNfSjU=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=acems1.com;
+ h=To:From:Subject:Date:MIME-Version:Content-Type:Content-Transfer-Encoding:
+ List-Unsubscribe:List-Unsubscribe-Post:Message-ID;
+ bh=Yi1qVUfEE7D9AjK1y2slmB1l/G8cQy/+qlJ8Rq354H0=;
+ b=uqMA8Mf3pqALnuRPdHFlHPgTbThPY9LBndRDyvRkeu5KbBB+fmtqlS71+gH4X0DRple9DBTqmFky
+   v7AGWUc//e+NI4fbAzhMoQYqDtF3XXvJHGkSFeMm9W6eE3vw47shxRpEReoxDXs6sgcFrPZIYh9+
+   byrH/39qEFDtmrScjBU=
+Received: by s4.csa1.acemsc1.com id hmdrfs2t56ge for <ameermadd@gmail.com>; Wed, 22 Jun 2022 20:08:59 +0000 (envelope-from <bounce-511522-1434-39472-ameermadd=gmail.com@s4.csa1.acemsd3.com>)
+X-Mailer: ActiveCampaign Mailer
+To: ameermadd@gmail.com
+From: "Andrew Aziz" <andrew@bearbulltraders.com>
+Subject: Big Day and Best Trading Course of 2020
+Date: Wed, 22 Jun 2022 15:06:33 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift-117414459362b37649c37be3.26168045_=_"
+Content-Transfer-Encoding: 7bit
+X-mid: YW1lZXJtYWRkQGdtYWlsLmNvbSAsIGMxNDM0ICwgbTI1NTkgLCBzMTMxMjEy
+x-virtual-mta: s4.csa1.acemsc1.com
+Feedback-ID: 511522:activecampaign
+X-250ok-CID: 511522-1434
+List-Unsubscribe: <mailto:unsubscribe-90eb561c17eb9ceb60b62fcccd32fb0b-1434-d7e4b99e324d17cf2c1d30ec0f80f809@s4.csa1.acemsd3.com>,
+ <http://bearbulltraders.activehosted.com/box.php?nl=2&c=1434&m=2559&s=d7e4b99e324d17cf2c1d30ec0f80f809&funcml=unsub2&luha=1>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Message-ID: <20220622200859.19210.1662772944.swift@bearbulltraders.activehosted.com>
+
+
+--_=_swift-117414459362b37649c37be3.26168045_=_
+Content-Type: text/plain; charset=utf-8
+
+Hey Traders,
+
+I hope you are having a good day. Yesterday, there were two pieces of
+exciting news for us. Firstly, I made a profit of over $50,000 while
+trading live in the chatroom. You can watch my recap here
+where I explain my trades. The market
+volatility is amazing and although it's a nightmare for investors, it is
+a heaven for traders 
+
+https://bearbulltraders.lt.acemlna.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZiZWFyYnVsbHRyYWRlcnMuY29tJTJGbWVtYmVyc2hpcC1hY2NvdW50JTJGbWVtYmVyc2hpcC1jaGVja291dCUyRiUzRmxldmVsJTNEMTMlMjZkaXNjb3VudF9jb2RlJTNEUkVJRDYw&sig=BLBHhw55xBRn3cihnMpqZeG2u7fH8ar9uYJ9ukfXpgUA&iat=1655928539&a=%7C%7C66163922%7C%7C&account=bearbulltraders%2Eactivehosted%2Ecom&email=b3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2wZTd1jg%3D&s=d7e4b99e324d17cf2c1d30ec0f80f809&i=1434A2559A2A12208
+
+And secondly, 
+
+**Business Insider** has recognized Bear Bull Traders for offering the
+best day trading course of 2022! This was an unpaid, unsolicited
+recognition, and caught me by surprise! Congrats to all of our members!
+Join us and be part of the best online day trading community out
+there!  
+
+I would like to invite you to join us for 1 year of full access to all
+of our community resources, webinars, chatroom, Discord, and more.
+Everything we have is available right here
+
+for only $999 - a 60% discount!
+
+Hope to see you all soon! 
+Andrew
+
+PS: this offer is not public on our website, so please do not share!
+
+https://bearbulltraders.lt.acemlna.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZ3d3cuZmFjZWJvb2suY29tJTJGdHJhZGVyLmFuZHJldy5heml6&sig=5LzSbB7MsNvNSSYHaSoRyuozZ68Jyhdk4AS4Rr7Hyfc1&iat=1655928539&a=%7C%7C66163922%7C%7C&account=bearbulltraders%2Eactivehosted%2Ecom&email=b3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2wZTd1jg%3D&s=d7e4b99e324d17cf2c1d30ec0f80f809&i=1434A2559A2A12210 
+
+ 
+
+https://bearbulltraders.lt.acemlna.com/Prod/link-tracker?redirectUrl=aHR0cCUzQSUyRiUyRnd3dy50d2l0dGVyLmNvbSUyRkJlYXJCdWxsVHJhZGVycw==&sig=5ESZgpsneSb2oK45M9PP6rZ1Z4SXEEZb6jLdEs6xBnc&iat=1655928539&a=%7C%7C66163922%7C%7C&account=bearbulltraders%2Eactivehosted%2Ecom&email=b3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2wZTd1jg%3D&s=d7e4b99e324d17cf2c1d30ec0f80f809&i=1434A2559A2A12211 
+
+ 
+
+https://bearbulltraders.lt.acemlna.com/Prod/link-tracker?redirectUrl=aHR0cCUzQSUyRiUyRnd3dy5saW5rZWRpbi5jb20lMkZjb21wYW55JTJGYmVhcmJ1bGx0cmFkZXJz&sig=GGhnW5A5sFKn6JkNKeqJ8iYcf4sir1e1j5ZxrfYcTTEB&iat=1655928539&a=%7C%7C66163922%7C%7C&account=bearbulltraders%2Eactivehosted%2Ecom&email=b3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2wZTd1jg%3D&s=d7e4b99e324d17cf2c1d30ec0f80f809&i=1434A2559A2A12212 
+
+ 
+
+https://bearbulltraders.lt.acemlna.com/Prod/link-tracker?redirectUrl=aHR0cHMlM0ElMkYlMkZ3d3cuYmVhcmJ1bGx0cmFkZXJzLmNvbSUyRnlvdXR1YmU=&sig=FES81irBkVywAyLquxZKW9HsNcsnUHQzEQtpUbMcx6Fw&iat=1655928539&a=%7C%7C66163922%7C%7C&account=bearbulltraders%2Eactivehosted%2Ecom&email=b3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2wZTd1jg%3D&s=d7e4b99e324d17cf2c1d30ec0f80f809&i=1434A2559A2A12213 
+
+ 
+
+https://bearbulltraders.lt.acemlna.com/Prod/link-tracker?redirectUrl=aHR0cCUzQSUyRiUyRnd3dy5pbnN0YWdyYW0uY29tJTJGYmVhcmJ1bGx0cmFkZXJzJTJG&sig=HhHkmRS5268abj5E5Lc6YaLn7sSr5wJ482iC4WdWutHX&iat=1655928539&a=%7C%7C66163922%7C%7C&account=bearbulltraders%2Eactivehosted%2Ecom&email=b3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2wZTd1jg%3D&s=d7e4b99e324d17cf2c1d30ec0f80f809&i=1434A2559A2A12214 
+
+Bear Bull Traders / Peak Capital Trading, #401 - 68 Water Street, Vancouver, British Columbia V6B 1A4, Canada 
+
+Unsubscribe 
+_________________
+
+Sent to ameermadd@gmail.com
+
+Unsubscribe:
+http://bearbulltraders.activehosted.com/proc.php?nl=2&amp;c=1434&amp;m=2559&amp;s=d7e4b99e324d17cf2c1d30ec0f80f809&amp;act=unsub
+
+Bear Bull Traders / Peak Capital Trading, #401 - 68 Water Street, Vancouver, British Columbia V6B 1A4, Canada
+--_=_swift-117414459362b37649c37be3.26168045_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html>=0A<head><meta http-equiv=3D"Content-Type" content=3D"=
+text/html; charset=3Dutf-8"><meta http-equiv=3D"Content-Language" content=
+=3D"en-us"><meta name=3D"format-detection" content=3D"telephone=3Dno"><meta=
+ name=3D"format-detection" content=3D"date=3Dno"><meta name=3D"format-detec=
+tion" content=3D"address=3Dno"><meta name=3D"format-detection" content=3D"e=
+mail=3Dno"><meta name=3D"viewport" content=3D"width=3Ddevice-width, minimal=
+-ui, initial-scale=3D1.0, maximum-scale=3D1.0, user-scalable=3D0;"><meta ht=
+tp-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><style data-ac-keep=3D"t=
+rue"> .ExternalClass { width: 100%; background: inherit; background-color: =
+inherit; } .ExternalClass, .ExternalClass p, .ExternalClass span, .External=
+Class font, .ExternalClass td, .ExternalClass div { line-height: 100%; } .E=
+xternalClass p, .ExternalClass ul, .ExternalClass ol { Margin: 0; } .undore=
+set div p, .undoreset p { margin-bottom: 20px; } div[class^=3D"aolmail_divb=
+ody"] { overflow: auto; } [owa] #ac-footer { padding: 20px 0px !important; =
+background:=0Ainherit; background-color: inherit; } a[x-apple-data-detector=
+s] { color: inherit !important; text-decoration: none !important; font-size=
+: inherit !important; font-family: inherit !important; font-weight: inherit=
+ !important; line-height: inherit !important; } @-ms-viewport { width: devi=
+ce-width; } </style><style data-ac-keep=3D"true">=0A@media only screen and =
+(max-width: 600px) { /*----------------------------------------------------=
+---------------------*\ Abandoned Cart widget \*---------------------------=
+---------------------------------------------*/ .td_abandoned-cart img {dis=
+play: block;padding-right: 0 !important;padding-bottom: 0 !important;width:=
+ 100% !important;max-width: 100% !important;height: auto !important;} body =
+{ padding: 0!important; font-size:1em!important; } * { -webkit-box-sizing: =
+border-box; -moz-box-sizing: border-box; box-sizing: border-box; } *[class]=
+.divbody {-webkit-text-size-adjust:none !important;} *[class].td_picture im=
+g {width:auto !important;} *[class].td_text { line-height: 110%; } *[class]=
+.td_button { width: auto; } /* Collapse all block elements */ :not(.body) t=
+able { display: block!important; float:none!important; border-collapse:coll=
+apse !important; width:100% !important; min-width:100% !important; clear:bo=
+th!important; } :not(.body) thead, :not(.body) tbody,=0A:not(.body) tr { di=
+splay:block!important; float:none!important; width:100% !important; } :not(=
+.body) th, :not(.body) td, :not(.body) p { display:block!important; float:n=
+one!important; width:100% !important; clear:both!important; } /* Remove bro=
+wser default styling for elements */ ul, ol { margin-left: 20px; margin-bot=
+tom: 10px; margin-top: 10px; -webkit-margin-before: 0; -webkit-margin-after=
+: 0; -webkit-padding-start: 0; } /* Set default height for spacer once coll=
+apse */ *[class].spacer { height: auto!important; } a[href^=3Ddate]{ color:=
+inherit !important; text-decoration:none !important;} a[href^=3Dtelephone]{=
+ color:inherit !important; text-decoration:none !important;} a[href^=3Daddr=
+ess]{ color:inherit !important; text-decoration:none !important;} a[href^=
+=3Demail]{ color:inherit !important; text-decoration:none !important;} /* D=
+efault table cell height */ td[height=3D"0"]{height:0px!important;font-size=
+:0px!important;line-height:0px!important;}=0Atd[height=3D"11"]{height:11px!=
+important;font-size:11px!important;line-height:11px!important;} /*---------=
+----------------------------------------------------------------*\ Product =
+Widget \*------------------------------------------------------------------=
+-------*/ .td_product div, .td_product .products-display { float: none !imp=
+ortant; display: block !important; width: 100% !important; Margin-bottom: 2=
+0px !important; } .td_product img { width: 100% !important; max-width: 100%=
+ !important; } /* Default social icons */ *[class].ac-social-icon-16 {width=
+:16px !important; height:16px !important;} *[class].ac-social-icon-24 {widt=
+h:24px !important; height:24px !important;} *[class].ac-social-icon-28 {wid=
+th:28px !important; height:28px !important;} *[class].__ac_social_icons { m=
+argin-right: 0px !important; } }=0A</style><style data-ac-keep=3D"true"> @m=
+edia only screen and (max-width: 320px) { #layout-row15477 img { width: 100=
+% !important; height: auto !important; max-width: 320px !important; } table=
+, tbody, td, .divbody { display: table !important; width: 100% !important; =
+max-width: 100% !important; } .td_rss .rss-item img.iphone_large_image { wi=
+dth: auto !important; } u + .body { display: table !important; width: 100vw=
+ !important; min-width: 100vw !important; } u + .body table { display: tabl=
+e !important; width: 100% !important; min-width: 100% !important; } u + .bo=
+dy td { display: block !important; width: 100% !important; min-width: 100% =
+!important; } u + .body img { display: inline-block !important; margin: aut=
+o !important; width: auto !important; vertical-align: bottom !important; } =
+u + .body center { display: block !important; margin: auto !important; widt=
+h: 100% !important; min-width: 100% !important; text-align: center !importa=
+nt; } u + .body table._ac_social_table, u=0A+ .body table._ac_social_table =
+td, u + .body table._ac_social_table div, u + .body table._ac_social_table =
+a { display: inline-block !important; margin: auto !important; width: auto =
+!important; min-width: auto !important; text-align: center !important; } u =
++ .body table._ac_social_table img { display: inline-block !important; marg=
+in: auto !important; width: 32px !important; min-width: 32px !important; ma=
+x-width: 32px !important; }=0A}=0A@media only screen and (max-width: 375px)=
+ { #layout-row15477 img { width: 100% !important; height: auto !important; =
+max-width: 375px !important; } table, tbody, td, .divbody { display: table =
+!important; width: 100% !important; max-width: 100% !important; } .td_rss .=
+rss-item img.iphone_large_image { width: auto !important; } u + .body { dis=
+play: table !important; width: 100vw !important; min-width: 100vw !importan=
+t; } u + .body table { display: table !important; width: 100% !important; m=
+in-width: 100% !important; } u + .body td { display: block !important; widt=
+h: 100% !important; min-width: 100% !important; } u + .body img { display: =
+inline-block !important; margin: auto !important; width: auto !important; v=
+ertical-align: bottom !important; } u + .body center { display: block !impo=
+rtant; margin: auto !important; width: 100% !important; min-width: 100% !im=
+portant; text-align: center !important; } u + .body table._ac_social_table,=
+ u + .body table._ac_social_table td, u=0A+ .body table._ac_social_table di=
+v, u + .body table._ac_social_table a { display: inline-block !important; m=
+argin: auto !important; width: auto !important; min-width: auto !important;=
+ text-align: center !important; } u + .body table._ac_social_table img { di=
+splay: inline-block !important; margin: auto !important; width: 32px !impor=
+tant; min-width: 32px !important; max-width: 32px !important; }=0A}=0A@medi=
+a only screen and (max-width: 414px) { #layout-row15477 img { width: 100% !=
+important; height: auto !important; max-width: 414px !important; } table, t=
+body, td, .divbody { display: table !important; width: 100% !important; max=
+-width: 100% !important; } .td_rss .rss-item img.iphone_large_image { width=
+: auto !important; } u + .body { display: table !important; width: 100vw !i=
+mportant; min-width: 100vw !important; } u + .body table { display: table !=
+important; width: 100% !important; min-width: 100% !important; } u + .body =
+td { display: block !important; width: 100% !important; min-width: 100% !im=
+portant; } u + .body img { display: inline-block !important; margin: auto !=
+important; width: auto !important; vertical-align: bottom !important; } u +=
+ .body center { display: block !important; margin: auto !important; width: =
+100% !important; min-width: 100% !important; text-align: center !important;=
+ } u + .body table._ac_social_table, u + .body table._ac_social_table td, u=
+=0A+ .body table._ac_social_table div, u + .body table._ac_social_table a {=
+ display: inline-block !important; margin: auto !important; width: auto !im=
+portant; min-width: auto !important; text-align: center !important; } u + .=
+body table._ac_social_table img { display: inline-block !important; margin:=
+ auto !important; width: 32px !important; min-width: 32px !important; max-w=
+idth: 32px !important; }=0A}=0A@media only screen and (max-width: 667px) { =
+#layout-row15477 img { width: 100% !important; height: auto !important; max=
+-width: 510px !important; } table, tbody, td, .divbody { display: table !im=
+portant; width: 100% !important; max-width: 100% !important; } .td_rss .rss=
+-item img.iphone_large_image { width: auto !important; } u + .body { displa=
+y: table !important; width: 100vw !important; min-width: 100vw !important; =
+} u + .body table { display: table !important; width: 100% !important; min-=
+width: 100% !important; } u + .body td { display: block !important; width: =
+100% !important; min-width: 100% !important; } u + .body img { display: inl=
+ine-block !important; margin: auto !important; width: auto !important; vert=
+ical-align: bottom !important; } u + .body center { display: block !importa=
+nt; margin: auto !important; width: 100% !important; min-width: 100% !impor=
+tant; text-align: center !important; } u + .body table._ac_social_table, u =
++ .body table._ac_social_table td, u=0A+ .body table._ac_social_table div, =
+u + .body table._ac_social_table a { display: inline-block !important; marg=
+in: auto !important; width: auto !important; min-width: auto !important; te=
+xt-align: center !important; } u + .body table._ac_social_table img { displ=
+ay: inline-block !important; margin: auto !important; width: 32px !importan=
+t; min-width: 32px !important; max-width: 32px !important; }=0A} </style><!=
+--[if !mso]><!-- webfonts --><!--<![endif]--><!--[if lt mso 12]> <![endif]-=
+-><!--[if gte mso 9]>=0A<xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:P=
+ixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings>=0A</xml>=0A<!=
+[endif]--></head><body id=3D"ac-designer" class=3D"body" style=3D"font-fami=
+ly: Arial; line-height: 1.1; margin: 0px; background-color: #ffffff; width:=
+ 100%; text-align: left;"><div class=3D"divbody" style=3D"margin: 0px; outl=
+ine: none; padding: 0px; color: #000000; font-family: arial; line-height: 1=
+.1; width: 100%; background-color: #ffffff; background: #ffffff; text-align=
+: left;"><table class=3D"template-table" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" width=3D"100%" align=3D"left" style=3D"-ms-text-size-adjust:=
+ auto; -webkit-text-size-adjust: 100%; border-collapse: collapse; font-size=
+: 14px; min-width: auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; back=
+ground-color: #ffffff; background: #ffffff;"><tr style=3D"mso-line-height-r=
+ule: exactly;"><td align=3D"left" valign=3D"top" width=3D"100%" style=3D"ms=
+o-line-height-rule: exactly;"><table class=3D"template-table" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"650" bgcolor=3D"#ffffff" style=
+=3D"-ms-text-size-adjust: auto;=0A-webkit-text-size-adjust: 100%; border-co=
+llapse: collapse; font-size: 14px; min-width: auto; mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt; max-width: 650px;"><tr style=3D"mso-line-height-rule=
+: exactly;"><td id=3D"layout_table_8d2704e7d63f9c0b461b4d17dfd128cefa3a603b=
+" valign=3D"top" align=3D"left" width=3D"650" style=3D"mso-line-height-rule=
+: exactly; background-color: #ffffff;"><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" class=3D"layout layout-table root-table" width=3D"650" =
+style=3D"-ms-text-size-adjust: auto; -webkit-text-size-adjust: 100%; border=
+-collapse: collapse; font-size: 14px; min-width: 100%; mso-table-lspace: 0p=
+t; mso-table-rspace: 0pt; background-color: #ffffff;"><tr style=3D"mso-line=
+-height-rule: exactly; background-color: #ffffff;"><td id=3D"layout-row-mar=
+gin15474" valign=3D"top" style=3D"mso-line-height-rule: exactly; padding: 0=
+; background-color: #ffffff;"><table width=3D"100%" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"-ms-text-size-adjust: auto;=0A-webkit-te=
+xt-size-adjust: 100%; border-collapse: initial !important; font-size: 14px;=
+ min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr id=3D"=
+layout-row15474" class=3D"layout layout-row widget _widget_text style15474"=
+ style=3D"mso-line-height-rule: exactly; margin: 0; padding: 0; background-=
+color: #ffffff;"><td id=3D"layout-row-padding15474" valign=3D"top" style=3D=
+"mso-line-height-rule: exactly; background-color: #ffffff; padding: 0 26px =
+26px 26px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"-ms-text-size-adjust: auto; -webkit-text-size-adjust: 100%=
+; border-collapse: collapse; font-size: 14px; min-width: 100%; mso-table-ls=
+pace: 0pt; mso-table-rspace: 0pt;"><tr style=3D"mso-line-height-rule: exact=
+ly;"><td id=3D"text_div14739" class=3D"td_text td_block" valign=3D"top" ali=
+gn=3D"left" width=3D"598" style=3D"line-height: 140%; mso-line-height-rule:=
+ exactly; margin: 0; outline: none; padding: 0; color: inherit; font-size: =
+12px; font-weight: inherit;=0Aline-height: 1.4; text-decoration: inherit; f=
+ont-family: arial;"> <div style=3D"line-height: 140%; margin: 0; outline: n=
+one; padding: 0; color: inherit; font-size: inherit; font-weight: inherit; =
+line-height: 1.4; text-decoration: inherit; text-align: justify; mso-line-h=
+eight-rule: exactly;" data-line-height=3D"1.4"> <div style=3D"margin: 0; ou=
+tline: none; padding: 0; color: inherit; font-size: inherit; font-weight: i=
+nherit; line-height: inherit; text-decoration: inherit;"><div class=3D"drop=
+area" contenteditable=3D"false" style=3D"margin: 0; outline: none; padding:=
+ 0; color: inherit; font-size: inherit; font-weight: inherit; line-height: =
+inherit; text-decoration: inherit;"></div>=0A <div style=3D"margin: 0; outl=
+ine: none; padding: 0; color: inherit; font-size: inherit; font-weight: inh=
+erit; line-height: inherit; text-decoration: inherit;"> <div class=3D"" sty=
+le=3D"margin: 0; outline: none; padding: 0; color: inherit; font-size: inhe=
+rit; font-weight: inherit; line-height: inherit; text-decoration: inherit;"=
+><span style=3D"color: #1f1f1f; font-size: 15px; font-weight: inherit; line=
+-height: inherit; text-decoration: inherit; font-family: arial; font-style:=
+ normal;">Hey </span><span class=3D"" style=3D"color: inherit; font-size: 1=
+5px; font-weight: inherit; line-height: inherit; text-decoration: inherit;"=
+>Traders,<br><br></span> <span class=3D"" style=3D"color: inherit; font-siz=
+e: 15px; font-weight: inherit; line-height: inherit; text-decoration: inher=
+it;"> <span style=3D"color: #000000; font-size: 15px; font-weight: inherit;=
+ line-height: inherit; text-decoration: inherit; font-family: arial;" lang=
+=3D"EN">I hope you are having a good day. Yesterday, there were two=0Apiece=
+s of exciting news for us. Firstly, I made a profit of over $50,000 while t=
+rading live in the chatroom. You can watch my recap <a href=3D"https://bear=
+bulltraders.lt.acemlna.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYl=
+MkZ5b3V0dS5iZSUyRkJpVXd0TnRhSWJn&sig=3D2EpafbG8XaacynFtgMDjVYLk2Ksi7pSJw6dD=
+vfTF25wP&iat=3D1655928539&a=3D%7C%7C66163922%7C%7C&account=3Dbearbulltrader=
+s%2Eactivehosted%2Ecom&email=3Db3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2wZTd1j=
+g%3D&s=3Dd7e4b99e324d17cf2c1d30ec0f80f809&i=3D1434A2559A2A12217" data-ac-de=
+fault-color=3D"1" style=3D"margin: 0; outline: none; padding: 0; color: #99=
+1b1e; text-decoration: underline;"><span style=3D"color: inherit; font-size=
+: 15px; font-weight: inherit; line-height: inherit; text-decoration: inheri=
+t;">here</span></a> where I explain my trades. The market volatility is ama=
+zing and although it's a nightmare for investors, it is a heaven for trader=
+s</span> </span></div>=0A</div>=0A</div>=0A</div>=0A<!--[if (gte mso 12)&(l=
+te mso 15) ]>=0A<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #tex=
+t_div14739, #text_div14739 div { line-height: 140% !important; };=0A</style=
+>=0A<![endif]--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=
+=0A</tr>=0A<tr style=3D"mso-line-height-rule: exactly; background-color: #f=
+fffff;"><td id=3D"layout-row-margin15477" valign=3D"top" style=3D"mso-line-=
+height-rule: exactly; padding: 0px; background-color: #ffffff;"><table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"-ms-te=
+xt-size-adjust: auto; -webkit-text-size-adjust: 100%; border-collapse: init=
+ial !important; font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt;"><tr id=3D"layout-row15477" class=3D"layout layout-row=
+ widget _widget_picture style15477" align=3D"center" style=3D"mso-line-heig=
+ht-rule: exactly;"><td id=3D"layout-row-padding15477" valign=3D"top" style=
+=3D"mso-line-height-rule: exactly; padding: 0 26px 26px 26px;"><table width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"-ms-tex=
+t-size-adjust: auto; -webkit-text-size-adjust: 100%; border-collapse: colla=
+pse; font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rsp=
+ace: 0pt;"><tr style=3D"mso-line-height-rule: exactly;"><td=0Aclass=3D"imag=
+e-td" align=3D"center" valign=3D"top" width=3D"598" style=3D"mso-line-heigh=
+t-rule: exactly;"><a href=3D"https://bearbulltraders.lt.acemlna.com/Prod/li=
+nk-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZiZWFyYnVsbHRyYWRlcnMuY29tJTJGbW=
+VtYmVyc2hpcC1hY2NvdW50JTJGbWVtYmVyc2hpcC1jaGVja291dCUyRiUzRmxldmVsJTNEMTMlM=
+jZkaXNjb3VudF9jb2RlJTNEUkVJRDYw&sig=3DBLBHhw55xBRn3cihnMpqZeG2u7fH8ar9uYJ9u=
+kfXpgUA&iat=3D1655928539&a=3D%7C%7C66163922%7C%7C&account=3Dbearbulltraders=
+%2Eactivehosted%2Ecom&email=3Db3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2wZTd1jg=
+%3D&s=3Dd7e4b99e324d17cf2c1d30ec0f80f809&i=3D1434A2559A2A12208" style=3D"ma=
+rgin: 0; outline: none; padding: 0; color: #991b1e; display: block; min-wid=
+th: 100%;"><img src=3D"https://content.app-us1.com/wBM6E/2022/06/22/91df2ad=
+1-a6f8-4b12-8e39-521f7f3e0a6f.png?r=3D1352070012" width=3D"425" style=3D"bo=
+rder: none; display: block; outline: none; width: 425px; opacity: 1; max-wi=
+dth: 100%;"></a></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=
+=0A</tr>=0A<tr style=3D"mso-line-height-rule: exactly; background-color: #f=
+fffff;"><td id=3D"layout-row-margin15478" valign=3D"top" style=3D"mso-line-=
+height-rule: exactly; padding: 0; background-color: #ffffff;"><table width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"-ms-tex=
+t-size-adjust: auto; -webkit-text-size-adjust: 100%; border-collapse: initi=
+al !important; font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso=
+-table-rspace: 0pt;"><tr id=3D"layout-row15478" class=3D"layout layout-row =
+widget _widget_text style15478" style=3D"mso-line-height-rule: exactly; mar=
+gin: 0; padding: 0; background-color: #ffffff;"><td id=3D"layout-row-paddin=
+g15478" valign=3D"top" style=3D"mso-line-height-rule: exactly; background-c=
+olor: #ffffff; padding: 0 26px 26px 26px;"><table width=3D"100%" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" style=3D"-ms-text-size-adjust: auto;=
+ -webkit-text-size-adjust: 100%; border-collapse: collapse; font-size: 14px=
+; min-width: 100%; mso-table-lspace: 0pt;=0Amso-table-rspace: 0pt;"><tr sty=
+le=3D"mso-line-height-rule: exactly;"><td id=3D"text_div14743" class=3D"td_=
+text td_block" valign=3D"top" align=3D"left" width=3D"598" style=3D"line-he=
+ight: 140%; mso-line-height-rule: exactly; margin: 0; outline: none; paddin=
+g: 0; color: inherit; font-size: 12px; font-weight: inherit; line-height: 1=
+.4; text-decoration: inherit; font-family: arial;"> <div style=3D"line-heig=
+ht: 140%; margin: 0; outline: none; padding: 0; color: inherit; font-size: =
+inherit; font-weight: inherit; line-height: 1.4; text-decoration: inherit; =
+text-align: justify; mso-line-height-rule: exactly;" data-line-height=3D"1.=
+4"> <div style=3D"margin: 0; outline: none; padding: 0; color: inherit; fon=
+t-size: inherit; font-weight: inherit; line-height: inherit; text-decoratio=
+n: inherit;"><div class=3D"droparea" contenteditable=3D"false" style=3D"mar=
+gin: 0; outline: none; padding: 0; color: inherit; font-size: inherit; font=
+-weight: inherit; line-height: inherit; text-decoration: inherit;"></div>=
+=0A <div style=3D"margin: 0; outline: none; padding: 0; color: inherit; fon=
+t-size: inherit; font-weight: inherit; line-height: inherit; text-decoratio=
+n: inherit;"> <div class=3D"" style=3D"margin: 0; outline: none; padding: 0=
+; color: inherit; font-size: inherit; font-weight: inherit; line-height: in=
+herit; text-decoration: inherit;"><span style=3D"color: #1f1f1f; font-size:=
+ 15px; font-weight: bold; line-height: inherit; text-decoration: inherit; f=
+ont-family: arial; font-style: normal;"> </span> <span class=3D"" style=3D"=
+color: inherit; font-size: 15px; font-weight: inherit; line-height: inherit=
+; text-decoration: inherit;"> </span> <span class=3D"" style=3D"color: inhe=
+rit; font-size: 15px; font-weight: inherit; line-height: inherit; text-deco=
+ration: inherit;"><span style=3D"color: #000000; font-size: inherit; font-w=
+eight: inherit; line-height: inherit; text-decoration: inherit;"><span styl=
+e=3D"color: #000000; font-size: inherit; font-weight: inherit; line-height:=
+ inherit; text-decoration:=0Ainherit; font-family: arial;" lang=3D"EN">And =
+secondly, <i style=3D"margin: 0; outline: none; padding: 0;">Business Insid=
+er</i> has recognized Bear Bull Traders for offering the best day trading c=
+ourse of 2022! This was an unpaid, unsolicited recognition, and caught me b=
+y surprise! Congrats to all of our members! Join us and be part of the best=
+ online day trading community out there!<span style=3D"color: #000000; font=
+-size: inherit; font-weight: inherit; line-height: inherit; text-decoration=
+: inherit;">=C2=A0 </span><br><br><span style=3D"color: #000000; font-size:=
+ inherit; font-weight: inherit; line-height: inherit; text-decoration: inhe=
+rit; font-family: arial;" lang=3D"EN">I would like to invite you to join us=
+ for 1 year of full access to all of our community resources, webinars, cha=
+troom, Discord, and more. Everything we have is available right <a=0Ahref=
+=3D"https://bearbulltraders.lt.acemlna.com/Prod/link-tracker?redirectUrl=3D=
+aHR0cHMlM0ElMkYlMkZiZWFyYnVsbHRyYWRlcnMuY29tJTJGbWVtYmVyc2hpcC1hY2NvdW50JTJ=
+GbWVtYmVyc2hpcC1jaGVja291dCUyRiUzRmxldmVsJTNEMTMlMjZkaXNjb3VudF9jb2RlJTNEUk=
+VJRDYw&sig=3DBLBHhw55xBRn3cihnMpqZeG2u7fH8ar9uYJ9ukfXpgUA&iat=3D1655928539&=
+a=3D%7C%7C66163922%7C%7C&account=3Dbearbulltraders%2Eactivehosted%2Ecom&ema=
+il=3Db3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2wZTd1jg%3D&s=3Dd7e4b99e324d17cf2=
+c1d30ec0f80f809&i=3D1434A2559A2A12208" data-ac-default-color=3D"1" style=3D=
+"margin: 0; outline: none; padding: 0; color: #991b1e; text-decoration: und=
+erline;"><span style=3D"color: inherit; font-size: inherit; font-weight: in=
+herit; line-height: inherit; text-decoration: inherit;">here</span></a> for=
+ only $999 - a 60% discount!</span></span><br><br></span> <span style=3D"co=
+lor: #000000; font-size: inherit; font-weight: inherit; line-height: inheri=
+t; text-decoration: inherit;"> Hope to see you all soon! <br>Andrew<br><br>=
+ PS: this offer is not public on our website, so please do not share!</span=
+></span><br style=3D"color: #1f1f1f; font-size: 15px;"></div>=0A </div>=0A =
+</div>=0A </div>=0A<!--[if (gte mso 12)&(lte mso 15) ]>=0A<style data-ac-ke=
+ep=3D"true" data-ac-inline=3D"false"> #text_div14743, #text_div14743 div { =
+line-height: 140% !important; };=0A</style>=0A<![endif]--></td>=0A</tr>=0A<=
+/table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A<tr style=3D"mso-line-=
+height-rule: exactly; background-color: #ffffff;"><td id=3D"layout-row-marg=
+in15476" valign=3D"top" style=3D"mso-line-height-rule: exactly; padding: 0p=
+x; background-color: #ffffff;"><table width=3D"100%" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" style=3D"-ms-text-size-adjust: auto; -webkit-tex=
+t-size-adjust: 100%; border-collapse: initial !important; font-size: 14px; =
+min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr id=3D"l=
+ayout-row15476" class=3D"layout layout-row widget _widget_social style15476=
+" style=3D"mso-line-height-rule: exactly;"><td id=3D"layout-row-padding1547=
+6" valign=3D"top" style=3D"mso-line-height-rule: exactly; padding: 0px 26px=
+ 0px 26px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"-ms-text-size-adjust: auto; -webkit-text-size-adjust: 100%=
+; border-collapse: collapse; font-size: 14px; min-width: 100%; mso-table-ls=
+pace: 0pt; mso-table-rspace: 0pt;"><tr style=3D"mso-line-height-rule: exact=
+ly;"><td=0Astyle=3D"mso-line-height-rule: exactly;"><table width=3D"100%" c=
+ellspacing=3D"0" cellpadding=3D"0" style=3D"-ms-text-size-adjust: auto; -we=
+bkit-text-size-adjust: 100%; border-collapse: collapse; font-size: 14px; mi=
+n-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr style=3D"=
+mso-line-height-rule: exactly;"><td width=3D"650" align=3D"left" style=3D"m=
+so-line-height-rule: exactly;"> <center style=3D"margin: 0; outline: none; =
+padding: 0; font-size: 0px;"> <table class=3D"_ac_social_table" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left" style=3D"-ms-text-size-adjust: auto=
+; -webkit-text-size-adjust: 100%; border-collapse: collapse; font-size: 0; =
+min-width: auto!important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; ma=
+rgin: auto!important; display: inline-block!important; text-align: left!imp=
+ortant;"><tr style=3D"mso-line-height-rule: exactly;"><td align=3D"center" =
+valign=3D"middle" width=3D"25" style=3D"mso-line-height-rule: exactly; disp=
+lay: inline-block!important; font-size: 0; width:=0A25px!important;"><div c=
+lass=3D"__ac_social_icons" style=3D"margin: 0; outline: none; padding: 0;">=
+<a href=3D"https://bearbulltraders.lt.acemlna.com/Prod/link-tracker?redirec=
+tUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuZmFjZWJvb2suY29tJTJGdHJhZGVyLmFuZHJldy5heml6=
+&sig=3D5LzSbB7MsNvNSSYHaSoRyuozZ68Jyhdk4AS4Rr7Hyfc1&iat=3D1655928539&a=3D%7=
+C%7C66163922%7C%7C&account=3Dbearbulltraders%2Eactivehosted%2Ecom&email=3Db=
+3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2wZTd1jg%3D&s=3Dd7e4b99e324d17cf2c1d30e=
+c0f80f809&i=3D1434A2559A2A12210" id=3D"facebook" class=3D"__ac_social_icon_=
+link" style=3D"margin: 0; outline: none; padding: 0; color: #991b1e;"><img =
+src=3D"https://bearbulltraders.img-us6.com/_social_/flat-outline-dark-poly-=
+facebook.png" border=3D"0" alt=3D"Facebook" width=3D"25" style=3D"border: n=
+one;"></a></div>=0A</td>=0A<td width=3D"10" style=3D"mso-line-height-rule: =
+exactly; display: inline-block!important; font-size: 0; width: 10px!importa=
+nt;">=C2=A0</td>=0A<td align=3D"center" valign=3D"middle" width=3D"25" styl=
+e=3D"mso-line-height-rule: exactly; display: inline-block!important; font-s=
+ize: 0; width: 25px!important;"><div class=3D"__ac_social_icons" style=3D"m=
+argin: 0; outline: none; padding: 0;"><a href=3D"https://bearbulltraders.lt=
+.acemlna.com/Prod/link-tracker?redirectUrl=3DaHR0cCUzQSUyRiUyRnd3dy50d2l0dG=
+VyLmNvbSUyRkJlYXJCdWxsVHJhZGVycw=3D=3D&sig=3D5ESZgpsneSb2oK45M9PP6rZ1Z4SXEE=
+Zb6jLdEs6xBnc&iat=3D1655928539&a=3D%7C%7C66163922%7C%7C&account=3Dbearbullt=
+raders%2Eactivehosted%2Ecom&email=3Db3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2w=
+ZTd1jg%3D&s=3Dd7e4b99e324d17cf2c1d30ec0f80f809&i=3D1434A2559A2A12211" id=3D=
+"twitter" class=3D"__ac_social_icon_link" style=3D"margin: 0; outline: none=
+; padding: 0; color: #991b1e;"><img src=3D"https://bearbulltraders.img-us6.=
+com/_social_/flat-outline-dark-poly-twitter.png" border=3D"0" alt=3D"Twitte=
+r" width=3D"25" style=3D"border: none;"></a></div>=0A</td>=0A<td width=3D"1=
+0" style=3D"mso-line-height-rule: exactly; display: inline-block!important;=
+ font-size: 0; width: 10px!important;">=C2=A0</td>=0A<td align=3D"center" v=
+align=3D"middle" width=3D"25" style=3D"mso-line-height-rule: exactly; displ=
+ay: inline-block!important; font-size: 0; width: 25px!important;"><div clas=
+s=3D"__ac_social_icons" style=3D"margin: 0; outline: none; padding: 0;"><a =
+href=3D"https://bearbulltraders.lt.acemlna.com/Prod/link-tracker?redirectUr=
+l=3DaHR0cCUzQSUyRiUyRnd3dy5saW5rZWRpbi5jb20lMkZjb21wYW55JTJGYmVhcmJ1bGx0cmF=
+kZXJz&sig=3DGGhnW5A5sFKn6JkNKeqJ8iYcf4sir1e1j5ZxrfYcTTEB&iat=3D1655928539&a=
+=3D%7C%7C66163922%7C%7C&account=3Dbearbulltraders%2Eactivehosted%2Ecom&emai=
+l=3Db3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2wZTd1jg%3D&s=3Dd7e4b99e324d17cf2c=
+1d30ec0f80f809&i=3D1434A2559A2A12212" id=3D"linkedin" class=3D"__ac_social_=
+icon_link" style=3D"margin: 0; outline: none; padding: 0; color: #991b1e;">=
+<img src=3D"https://bearbulltraders.img-us6.com/_social_/flat-outline-dark-=
+poly-linkedin.png" border=3D"0" alt=3D"Linkedin" width=3D"25" style=3D"bord=
+er: none;"></a></div>=0A</td>=0A<td width=3D"10" style=3D"mso-line-height-r=
+ule: exactly; display: inline-block!important; font-size: 0; width: 10px!im=
+portant;">=C2=A0</td>=0A<td align=3D"center" valign=3D"middle" width=3D"25"=
+ style=3D"mso-line-height-rule: exactly; display: inline-block!important; f=
+ont-size: 0; width: 25px!important;"><div class=3D"__ac_social_icons" style=
+=3D"margin: 0; outline: none; padding: 0;"><a href=3D"https://bearbulltrade=
+rs.lt.acemlna.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuY=
+mVhcmJ1bGx0cmFkZXJzLmNvbSUyRnlvdXR1YmU=3D&sig=3DFES81irBkVywAyLquxZKW9HsNcs=
+nUHQzEQtpUbMcx6Fw&iat=3D1655928539&a=3D%7C%7C66163922%7C%7C&account=3Dbearb=
+ulltraders%2Eactivehosted%2Ecom&email=3Db3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2=
+Fz2wZTd1jg%3D&s=3Dd7e4b99e324d17cf2c1d30ec0f80f809&i=3D1434A2559A2A12213" i=
+d=3D"youtube" class=3D"__ac_social_icon_link" style=3D"margin: 0; outline: =
+none; padding: 0; color: #991b1e;"><img src=3D"https://bearbulltraders.img-=
+us6.com/_social_/flat-outline-dark-poly-youtube.png" border=3D"0" alt=3D"Yo=
+utube" width=3D"25" style=3D"border: none;"></a></div>=0A</td>=0A<td width=
+=3D"10" style=3D"mso-line-height-rule: exactly; display: inline-block!impor=
+tant; font-size: 0; width: 10px!important;">=C2=A0</td>=0A<td align=3D"cent=
+er" valign=3D"middle" width=3D"25" style=3D"mso-line-height-rule: exactly; =
+display: inline-block!important; font-size: 0; width: 25px!important;"><div=
+ class=3D"__ac_social_icons" style=3D"margin: 0; outline: none; padding: 0;=
+"><a href=3D"https://bearbulltraders.lt.acemlna.com/Prod/link-tracker?redir=
+ectUrl=3DaHR0cCUzQSUyRiUyRnd3dy5pbnN0YWdyYW0uY29tJTJGYmVhcmJ1bGx0cmFkZXJzJT=
+JG&sig=3DHhHkmRS5268abj5E5Lc6YaLn7sSr5wJ482iC4WdWutHX&iat=3D1655928539&a=3D=
+%7C%7C66163922%7C%7C&account=3Dbearbulltraders%2Eactivehosted%2Ecom&email=
+=3Db3rbFHrX00f0Wy8F5JB17UzkASpiHornD%2Fz2wZTd1jg%3D&s=3Dd7e4b99e324d17cf2c1=
+d30ec0f80f809&i=3D1434A2559A2A12214" id=3D"instagram" class=3D"__ac_social_=
+icon_link" style=3D"margin: 0; outline: none; padding: 0; color: #991b1e;">=
+<img src=3D"https://bearbulltraders.img-us6.com/_social_/flat-outline-dark-=
+poly-instagram.png" border=3D"0" alt=3D"Instagram" width=3D"25" style=3D"bo=
+rder: none;"></a></div>=0A</td>=0A</tr>=0A</table>=0A</center> </td>=0A </t=
+r>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=
+=0A</tr>=0A<tr style=3D"mso-line-height-rule: exactly; background-color: #f=
+fffff;"><td id=3D"layout-row-margin15475" valign=3D"top" style=3D"mso-line-=
+height-rule: exactly; padding: 0; background-color: #ffffff;"><table width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"-ms-tex=
+t-size-adjust: auto; -webkit-text-size-adjust: 100%; border-collapse: initi=
+al !important; font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso=
+-table-rspace: 0pt;"><tr id=3D"layout-row15475" class=3D"layout layout-row =
+widget _widget_text style15475" style=3D"mso-line-height-rule: exactly; mar=
+gin: 0; padding: 0; background-color: #ffffff;"><td id=3D"layout-row-paddin=
+g15475" valign=3D"top" style=3D"mso-line-height-rule: exactly; background-c=
+olor: #ffffff; padding: 10px 26px 26px 26px;"><table width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"-ms-text-size-adjust: a=
+uto; -webkit-text-size-adjust: 100%; border-collapse: collapse; font-size: =
+14px; min-width: 100%; mso-table-lspace: 0pt;=0Amso-table-rspace: 0pt;"><tr=
+ style=3D"mso-line-height-rule: exactly;"><td id=3D"text_div14740" class=3D=
+"td_text td_block" valign=3D"top" align=3D"left" width=3D"598" style=3D"lin=
+e-height: 140%; mso-line-height-rule: exactly; margin: 0; outline: none; pa=
+dding: 0; color: inherit; font-size: 12px; font-weight: inherit; line-heigh=
+t: 1.4; text-decoration: inherit; font-family: arial;"> <div style=3D"line-=
+height: 140%; margin: 0; outline: none; padding: 0; color: inherit; font-si=
+ze: inherit; font-weight: inherit; line-height: 1.4; text-decoration: inher=
+it; mso-line-height-rule: exactly;" class=3D"" data-line-height=3D"1.4"><di=
+v class=3D"droparea" contenteditable=3D"false" style=3D"margin: 0; outline:=
+ none; padding: 0; color: inherit; font-size: inherit; font-weight: inherit=
+; line-height: inherit; text-decoration: inherit;"></div>=0A <div class=3D"=
+" style=3D"margin: 0; outline: none; padding: 0; color: inherit; font-size:=
+ inherit; font-weight: inherit; line-height: inherit; text-decoration: inhe=
+rit;"> <div style=3D"margin: 0; outline: none; padding: 0; color: inherit; =
+font-size: 11px; font-weight: inherit; line-height: inherit; text-decoratio=
+n: inherit;" class=3D""> <div class=3D"" style=3D"margin: 0; outline: none;=
+ padding: 0; color: #000000; font-size: inherit; font-weight: inherit; line=
+-height: inherit; text-decoration: inherit;"> <span style=3D"color: #000000=
+; font-size: inherit; font-weight: inherit; line-height: inherit; text-deco=
+ration: inherit;" class=3D""> <span class=3D"" style=3D"color: #000000; fon=
+t-size: inherit; font-weight: inherit; line-height: inherit; text-decoratio=
+n: inherit;"><span style=3D"color: #000000; font-size: inherit; font-weight=
+: inherit; line-height: inherit; text-decoration: inherit;" class=3D"">Bear=
+ Bull Traders / Peak Capital Trading, #401 - 68 Water Street, Vancouver, Br=
+itish Columbia V6B 1A4, Canada</span> </span><br style=3D"color: #000000;" =
+class=3D""></span></div>=0A<div class=3D"" style=3D"margin: 0; outline: non=
+e; padding: 0; color: inherit; font-size: inherit; font-weight: inherit; li=
+ne-height: inherit; text-decoration: inherit;"><br class=3D"" style=3D"colo=
+r: #045fb4;"></div>=0A<div class=3D"" style=3D"margin: 0; outline: none; pa=
+dding: 0; color: inherit; font-size: inherit; font-weight: inherit; line-he=
+ight: inherit; text-decoration: inherit;"><a href=3D"http://bearbulltraders=
+.activehosted.com/proc.php?nl=3D2&c=3D1434&m=3D2559&s=3Dd7e4b99e324d17cf2c1=
+d30ec0f80f809&act=3Dunsub" style=3D"margin: 0; outline: none; padding: 0; c=
+olor: #991b1e; text-decoration: underline;" target=3D"_blank" class=3D""><s=
+pan style=3D"color: #991b1e; font-size: inherit; font-weight: inherit; line=
+-height: inherit; text-decoration: inherit;" class=3D"">Unsubscribe</span><=
+/a><br class=3D""></div>=0A </div>=0A </div>=0A </div>=0A<!--[if (gte mso 1=
+2)&(lte mso 15) ]>=0A<style data-ac-keep=3D"true" data-ac-inline=3D"false">=
+ #text_div14740, #text_div14740 div { line-height: 140% !important; };=0A</=
+style>=0A<![endif]--></td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A=
+</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</tab=
+le>=0A</div>=0A<img src=3D"https://bearbulltraders.lt.acemlna.com/Prod/link=
+-tracker?nl=3D2&c=3D1434&m=3D2559&s=3Dd7e4b99e324d17cf2c1d30ec0f80f809&l=3D=
+open&account=3Dbearbulltraders.activehosted.com&a=3D66163922" border=3D"0" =
+width=3D"1" height=3D"1" style=3D"display:block;width:1px!important;min-wid=
+th:1px!important;max-width:1px!important;height:1px!important;border:0;over=
+flow:hidden;" /><br /><br clear=3D"all" /></body>=0A</html>
+--_=_swift-117414459362b37649c37be3.26168045_=_--
+
