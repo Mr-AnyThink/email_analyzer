@@ -68,8 +68,10 @@ def count_URLs(mail):
     for part in mail.walk():
         msg = str(part.get_payload(decode=True))
         urls_all = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+#]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+',msg)
-        for url in urls_all:
-            i = i + 1
+        if urls_all:
+            unique_urls = set(urls_all)
+            for url in unique_urls:
+              i = i + 1
     return(i)
 
 #######################
@@ -80,8 +82,10 @@ def extractURLs(mail):
         for part in mail.walk():
                 msg = str(part.get_payload(decode=True))
                 urls_all = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+#]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+',msg)
-                for url in urls_all:
-                        print (url + "\n")
+                if urls_all:
+                      unique_urls = set(urls_all)
+                      for url in unique_urls:
+                         print (url + "\n")
 
 ##############################################
 # Email Body
